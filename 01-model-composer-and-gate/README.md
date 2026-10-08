@@ -100,8 +100,6 @@ Vivado 2025.1 synthesized the design for `xc7a35tcpg236-1` using approximately:
 
 ```text
 01-model-composer-and-gate/
-├── model/
-│   └── first_model.slx
 ├── generated_hdl/
 │   ├── little_logic.v
 │   ├── little_logic_entity_declarations.v
@@ -114,6 +112,10 @@ Vivado 2025.1 synthesized the design for `xc7a35tcpg236-1` using approximately:
 │   └── create_vivado_project.tcl
 └── README.md
 ```
+
+## Model Composer source
+
+The original `first_model.slx` model is part of the local project archive, but is not currently checked into this GitHub repository. The generated HDL, constraints, build script and synthesis report are included here so the FPGA implementation can still be inspected and rebuilt.
 
 ## Rebuilding in Vivado
 
