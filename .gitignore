@@ -1,0 +1,38 @@
+# Vivado generated project/build outputs
+.Xil/
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+build/
+
+# Vivado logs/checkpoints/output products
+*.jou
+*.log
+*.pb
+*.rpx
+*.dcp
+*.bit
+*.bin
+*.ltx
+*.wdb
+*.vdi
+*.vds
+*.str
+
+# Model Composer / MATLAB generated files
+slprj/
+codegen/
+*.autosave
+model_composer.log
+model_composer_hdl.log
+dfx_runtime.txt
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
