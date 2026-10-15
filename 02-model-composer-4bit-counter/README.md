@@ -91,3 +91,14 @@ Set **JP1 to JTAG** (with power off) if you want predictable JTAG-first developm
 
 - [Tutorial 2 — repeatable GUI flash guide in Notion](https://app.notion.com/p/3faf247c372281958703fe9b4b28a10b)
 - [Digilent Basys 3 reference manual](https://digilent.com/reference/programmable-logic/basys-3/reference-manual)
+
+
+## Original Tutorial 2 ZIP inspection (15 October 2026)
+
+We split the supplied archive into two separate designs; the companion [Sample Delay](../03-model-composer-sample-delay/) is not part of this counter project. See [source inventory](../TUTORIAL_2_SOURCE_INVENTORY.md).
+
+The original counter model is named **`couter_test.slx`** (misspelling preserved). Its Counter and Gateway block sample period is **`1/2` seconds**; generated `subsystem.v` contains a rate/clock-enable period of **50,000,000** base clock cycles at **100 MHz**. This is intended to make updates slow enough to observe without simulating a multisecond interval in Simulink. The generated design uses vendor `c_counter_binary` IP.
+
+**Actual report excerpts:** Vivado routed timing summary at a 10 ns constraint: WNS **+7.181 ns**, WHS **+0.179 ns**, and TNS **0**. Reported synthesis resources include **12 Slice LUTs** and **32 Slice registers**. A routed DRC warning **CFGBVS-1** remains; the earlier Model Composer multicycle-path no-valid-startpoint warning also needs reviewing. These are evidence from the archive, not evidence of fully audited timing exceptions.
+
+**Source-file note:** The supplied `couter_test.slx`, generated AMD/Xilinx support HDL and flash configuration images are preserved in the separately prepared counter source bundle, not yet uploaded into this **public** repository. Generated modules contain vendor licence notices, and the course's third-party PDF has not been republished. This repository includes the hardware wiring and reproducible steps, but **the posted GitHub folder alone is not yet a full source rebuild**.
