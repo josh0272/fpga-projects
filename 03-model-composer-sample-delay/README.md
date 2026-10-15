@@ -56,7 +56,7 @@ If you decide to test it on hardware, connect input/output to valid Basys 3 swit
 
 ## Repository note
 
-Only the hand-written project documentation is committed here. The unmodified `delay_block.slx` source model and the vendor HDL/report files are preserved in the accompanying **`03-model-composer-sample-delay-source-bundle.zip`** delivered in chat. A source model can be added to the repository separately after reviewing contents and licensing.
+This public project includes project documentation, the copied **generated top-level `generated_hdl/sample_delay.v`**, and a reference clock XDC. The generated top level **depends on additional Model Composer support modules not committed here**, so it cannot be rebuilt as-is. The unmodified `delay_block.slx` model, the full generated HDL dependencies, and detailed reports are preserved in the accompanying **`03-model-composer-sample-delay-source-bundle.zip`** delivered in chat. A source model can be added to the repository separately after reviewing contents and licensing.
 
 See the related [four-bit counter project](../02-model-composer-4bit-counter/) for the complete verified hardware and SPI-flash boot workflow.
 
